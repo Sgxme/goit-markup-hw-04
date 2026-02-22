@@ -147,13 +147,14 @@ header {}
 
 .active {
     position: relative;
+    color: #404bbf;
 }
 
 .active::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     
     width: 100%;
     height: 4px;
@@ -194,19 +195,19 @@ header {}
 
 /* #region Hero */
 .hero {
-    padding: 188px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: #2E2F42;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-    ),
-    
-    url(../images/office.jpg);
     width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
+    
+    padding: 188px 0;
+    
+    background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url("../images/office.jpg");
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-con {
@@ -332,12 +333,14 @@ header {}
     gap: 24px;
     align-items: center;
     justify-content: center;
-    padding-bottom: 32px;
+    margin-top: 8px;
 }
 .team-socials-link {
     background-color: #4D5AE5;
     border-radius: 50%;
-     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 40px;
+    height: 40px;
 }
 .team-socials-con {
     width: 40px;
@@ -359,7 +362,8 @@ header {}
     fill: #F4F4FD;
 }
 
-.team-socials-con:hover {
+.team-socials-con:hover, 
+.team-socials-con:focus {
     background-color: #404BBF;
 }
 /* #endregion */
@@ -377,7 +381,6 @@ header {}
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    width: calc((100% - 24 * 3) / 4);
     gap: 48px 24px;
 }
 
@@ -395,6 +398,7 @@ header {}
     position: relative;
     overflow: hidden;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc((100% - 48px) / 3);
 }
 
 .portfolio-item:hover {
@@ -442,7 +446,7 @@ header {}
 
 .footer-container {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 120px;
 }
 
@@ -504,7 +508,8 @@ header {}
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus{
     background-color: #31d0aa;
 }
 
