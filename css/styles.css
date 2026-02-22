@@ -43,7 +43,7 @@ body {
     background-color: #ffffff;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.02em;A
     font-style: normal;
 }
 
@@ -366,6 +366,11 @@ header {}
 
 .team-socials-con:hover, 
 .team-socials-con:focus {
+    background-color: #404BBF;
+}
+
+.team-socials-link:hover,
+.team-socials-link:focus {
     background-color: #404BBF;
 }
 /* #endregion */
