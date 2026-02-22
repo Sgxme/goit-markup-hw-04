@@ -136,25 +136,23 @@ header {}
 .nav-studio {
     color: #2E2F42;
 }
-
-.navigation-division {
-}
-.navigation-list-item {
+.navigation-list-link {
     font-weight: 500;
     color: #2E2F42;
     display: block;
     padding: 24px 0;
     position: relative;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.active {
+.active::after {
     content: "";
     display: block;
-    width: 100%;
     height: 4px;
     border-bottom: 4px solid #404bbf;
     border-radius: 2px;
     bottom: 0;
     position: absolute;
+    width: 100%;
 }
 
 .contacts {
@@ -177,10 +175,10 @@ header {}
     margin-bottom: 24px;
 }
 
-.navigation-list-item:hover,
-.navigation-list-item:focus,
-.contacts-list-item:hover,
-.contacts-list-item:focus {
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.contacts-list-link:hover,
+.contacts-list-link:focus {
     color: #404BBF;
 }
 
@@ -201,6 +199,7 @@ header {}
     url(../images/office.jpg);
     width: 100%;
     margin: 0 auto;
+    max-width: 1440px;
 }
 
 .hero-con {
@@ -327,12 +326,20 @@ header {}
     justify-content: center;
     padding-bottom: 32px;
 }
+.team-socials-link {
+    background-color: #4D5AE5;
+    border-radius: 50%;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .team-socials-con {
     width: 40px;
     height: 40px;
     align-items: center;
     justify-content: center;
     display: flex;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-socials-icon {
     align-items: center;
@@ -343,11 +350,8 @@ header {}
     color: #F4F4FD;
     fill: #F4F4FD;
 }
-.team-socials-link {
-    background-color: #4D5AE5;
-    border-radius: 50%;
-}
-.team-socials-link:hover {
+
+.team-socials-con:hover {
     background-color: #404BBF;
 }
 /* #endregion */
@@ -382,6 +386,7 @@ header {}
     background-color: #fff;
     position: relative;
     overflow: hidden;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
@@ -395,28 +400,29 @@ header {}
     display: block;
 }
 .portfolio-thumb {
+    position: relative;
+    overflow: hidden;
 }
 
 .portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
+
     background-color: #4D5AE5;
     color: #f4f4fd;
     padding: 40px 32px;
-    padding-bottom: 152px;
-    transform: translateY(300px);
+
+    transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-overlay {
     transform: translateY(0);
 }
-.portfolio-item-example {
-    margin-bottom: 8px;
-}
 
-.portfolio-item-desc {}
 /* #endregion */
 
 /* #region Footer */
@@ -429,7 +435,6 @@ header {}
     display: flex;
     align-items: flex-start;
     gap: 120px;
-    
 }
 
 .footer-left {
@@ -445,49 +450,54 @@ header {}
     color: #F4F4FD;
 }
 
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-social-title {
     font-weight: 500;
     color: #FFFFFF;
     margin-bottom: 16px;
 }
 
-.footer-socials {
+.footer-social-list {
     display: flex;
-    flex-direction: column;
-}
-
-.footer-general-socials-con {
-    display: flex;
-    flex-wrap: wrap;
     gap: 16px;
-    margin-top: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.footer-socials-con {
+.footer-social-item {
     width: 40px;
     height: 40px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
 }
 
-.footer-socials-icon {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    width: 24px;
-    height: 24px;
-    color: #F4F4FD;
-    fill: #F4F4FD;
-}
 
 .footer-socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
     background-color: #4D5AE5;
     border-radius: 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-link:hover {
-    background-color: #404BBF;
+    background-color: #31D0AA;
+}
+
+
+.footer-socials-icon {
+    width: 24px;
+    height: 24px;
+    fill: #F4F4FD;
 }
 
 /* #endregion */
