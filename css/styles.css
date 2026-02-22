@@ -26,7 +26,7 @@ h6 {
 h2 {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11111;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
@@ -84,7 +84,7 @@ header {}
     color: #4D5AE5;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
@@ -217,9 +217,11 @@ header {}
 }
 
 .hero-headline {
+    font-weight: 700;
     font-size: 56px;
-    line-height: 1.07143;
-    color: #ffffff;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #fff;
     max-width: 496px;
     margin-bottom: 48px;
 }
@@ -460,6 +462,7 @@ header {}
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
+    letter-spacing: 0.02em;
     text-decoration: none;
     color: #4d5ae5;
 }
